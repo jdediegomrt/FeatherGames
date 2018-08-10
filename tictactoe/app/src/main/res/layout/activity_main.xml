@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jaimedediego.feathergames.tictactoe.view.MainActivity"
+    android:background="@color/default_background_grey">
+
+    <RelativeLayout
+        android:id="@+id/players_info"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/playerO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/playerO"
+            android:textColor="@color/md_black_1000"
+            android:textAlignment="center"
+            android:textSize="48sp"/>
+
+        <TextView
+            android:id="@+id/playerX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/playerX"
+            android:textColor="@color/md_black_1000"
+            android:textAlignment="center"
+            android:textSize="48sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/game_layout"
+        android:layout_below="@+id/players_info"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="220dp"
+        android:layout_height="220dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/md_black_1000"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/md_black_1000"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <View
+                android:background="@color/md_black_1000"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.jaimedediego.feathergames.tictactoe.view.Components.Cell
+                android:id="@+id/b9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/stats"
+        android:src="@drawable/ic_assessment_white_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/settings"
+        android:src="@drawable/ic_settings_white_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/opts_container"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.jaimedediego.feathergames.tictactoe.view.Components.CustomRadioGroup
+            android:id="@+id/opts"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:id="@+id/dummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dummy"/>
+
+            <RadioButton
+                android:id="@+id/easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dummy"/>
+
+            <RadioButton
+                android:id="@+id/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dummy"/>
+
+            <RadioButton
+                android:id="@+id/hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dummy"/>
+
+        </com.jaimedediego.feathergames.tictactoe.view.Components.CustomRadioGroup>
+
+        <com.jaimedediego.feathergames.tictactoe.view.Components.CustomCheckBox
+            android:id="@+id/two_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/opts"
+            android:text="@string/two_players_mode"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

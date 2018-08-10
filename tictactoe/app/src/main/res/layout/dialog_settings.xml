@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background_grey">
+
+    <RelativeLayout
+        android:id="@+id/title_container"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:gravity="center_vertical"
+        android:minHeight="30sp">
+
+        <TextView
+            android:id="@+id/stats_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/title_container"
+        android:animateLayoutChanges="true"
+        android:id="@+id/settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/choose_your_side"
+                android:layout_centerVertical="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="15sp"/>
+
+            <RadioGroup
+                android:layout_centerVertical="true"
+                android:id="@+id/player_side"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <RadioButton
+                    android:id="@+id/player_side_O"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/playerO"/>
+
+                <RadioButton
+                    android:id="@+id/player_side_X"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/playerX"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/change_theme"
+                android:layout_centerVertical="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <GridView
+                android:id="@+id/color_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:numColumns="6"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
