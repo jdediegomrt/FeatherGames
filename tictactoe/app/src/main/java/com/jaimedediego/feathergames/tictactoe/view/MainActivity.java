@@ -215,7 +215,9 @@ public class MainActivity extends AppCompatActivity
             final SettingsDialog dialog = new SettingsDialog(this);
             dialog.show();
         } else {
-            Controller.getInstance().getIA().disableAvailableCells();
+            if(!twoPlayers.isChecked() && Controller.getInstance().movementsCount < 8) {
+                Controller.getInstance().getIA().disableAvailableCells();
+            }
             Controller.getInstance().movement((Cell) v);
             if(!twoPlayers.isChecked() && Controller.getInstance().movementsCount < 8){
                 Controller.getInstance().getIA().move();
